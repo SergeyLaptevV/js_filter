@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/controllers.js"></script>
+    <script src="js/JS_filter.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- header -->
+    <header>
+    </header>
+    <!-- End header -->
+    <!-- main content -->
+    <div id="main">
+        <div class="search">
+            <input class="inp" type="text" ng-model="test"> <span>angularJS</span>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th ng-click="orderByMe('id')">id</th>
+                    <th ng-click="orderByMe('name')">name</th>
+                    <th ng-click="orderByMe('position')">position</th>
+                    <th ng-click="orderByMe('jerseyNumber')">jerseyNumber</th>
+                    <th ng-click="orderByMe('dateOfBirth')">dateOfBirth</th>
+                    <th ng-click="orderByMe('nationality')">nationality</th>
+                    <th ng-click="orderByMe('contractUntil')">contractUntil</th>
+                    <th ng-click="orderByMe('marketValue')">marketValue</th>
+                </tr>
+                <tr ng-repeat="item in items  | filter:test | orderBy:myOrderBy">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.position}}</td>
+                    <td>{{item.jerseyNumber}}</td>
+                    <td>{{item.dateOfBirth}}</td>
+                    <td>{{item.nationality}}</td>
+                    <td>{{item.contractUntil}}</td>
+                    <td>{{item.marketValue}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <br/><br/><br/>
+            <div class="search">
+                <input class="inp" name="filt" onkeyup="filter(this, 'sf')" type="text" />
+                <span> JS </span>
+            </div>
+            <div id="id01"></div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+    </footer>
+    <!-- End footer -->
+</body>
+</html>

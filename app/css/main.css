@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color:#434753;
+    height:60px;
+
+}
+#main{
+    margin: 0 auto;
+    width: 100%;
+    text-align:center;
+}
+.search{
+    text-align: center;
+    padding: 45px 0 25px 0;
+}
+.inp{
+    width: 450px;
+    border-radius:5px;
+}
+table {
+    width: 100%;
+}
+th{
+    border: 2px outset black;
+}
+td {
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+footer{
+    background-color:#434753;
+    height:80px;
+    width:100%;
+    color:white;
+    font-size: 14px;
+}
